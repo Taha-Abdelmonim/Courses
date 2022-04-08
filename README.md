@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gulp v4 Boilerplate
 
 npm install --global --production windows-build-tools@4.0.0
@@ -34,3 +35,6 @@ gulp develop
 
 - npm run gulp:dev - launches watchers and server & compile project.
 - npm run gulp:build - optimize & minify files for production version.
+=======
+# Courses
+>>>>>>> bf37701347ebb496e8def80c2a87973810c46ae4
