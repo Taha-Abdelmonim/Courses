@@ -1,0 +1,34 @@
+:root {
+  // Changer Color
+  --main-color: #f6e58d;
+  --site-color: #fff;
+  --site-bg-color: #292c33;
+  --r-site-color: #f6f5f5;
+
+  // Not Change Color
+  --super-color: #f6e58d;
+  --super-r-color: #f5cd79;
+  --static-site-color: #f6f5f5;
+  --static-bg-color: #eee;
+  --static-r-site-color: #d5d5d5;
+  --main-site-color: #fff;
+  --main-bg-site-color: #292c33;
+  --main-p: #4d4949;
+  // Global Variable
+  --padding-t: 100px;
+  --padding-b: 100px;
+  --main-transition: all 0.3s ease-in-out;
+}
+
+body.dark {
+  --site-color: #292c33;
+  --site-bg-color: #f8f9fa;
+  --r-site-color: #34495e;
+}
+$main-page: "home";
+// $maxSmall: "(max-width: 991px)";
+
+$maxMobile: "(max-width: 767px)";
+$minSmall: "(min-width: 768px)";
+$minMedium: "(min-width: 992px)";
+$minLarge: "(min-width: 1200px)";

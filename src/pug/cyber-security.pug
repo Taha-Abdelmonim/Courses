@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/meta
+    title Cyber Security
+    include includes/styles
+
+    // inject:css
+    // endinject
+  body
+    include layout/global
+    .articles#articles
+      h2.main-title(data-aos="flip-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") Cyber Security From
+      .container
+        .box(data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/d.png" alt="IBM")
+          .content-box
+            h3 IBM Cybersecurity Analyst
+            p Develop knowledge of cybersecurity analyst tools including data protection; endpoint protection; SIEM; and systems and network fundamentals.
+          .info-box
+            a(href="https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst" alt="IBM" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+        .box(data-aos="flip-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/e.png" alt="Free4arab")
+          .content-box
+            h3 Free4arab 
+            p How do I get started in information security?In this post, we will collect videos and free courses for you that you start in the field of information security
+          .info-box
+            a(href="https://free4arab.net/" alt="Free4arab" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+        .box(data-aos="flip-right" data-aos-delay="1000" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/f.jpg" alt="Ibrahim Hegazy")
+          .content-box
+            h3 Ibrahim Hegazy
+            p How do I get started in information security?In this post, we will collect videos and free courses for you that you start in the field of information security
+          .info-box
+            a(href="https://www.youtube.com/user/Zigoo0/playlists" alt="Ibrahim Hegazy" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+    .haram
+    include layout/footer
+    script(src="./layout/js/global.min.js")

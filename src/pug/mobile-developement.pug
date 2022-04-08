@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/meta
+    title Mobile Developement
+    include includes/styles
+
+    // inject:css
+    // endinject
+  body
+    include layout/global
+    .articles#articles
+      h2.main-title(data-aos="flip-up" data-aos-duration="1000" data-aos-easing="linear" data-aos-once="false") Mobile Developement From
+      .container
+        .box(data-aos="fade-up" data-aos-delay="500" data-aos-duration="3000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/j.jpg" alt="Coursera")
+          .content-box
+            h3 Coursera
+            p The Kotlin programming language is a modern language that gives you more power for your everyday tasks. Kotlin is concise, safe, pragmatic, and focused on interoperability with Java code. It can be used almost everywhere Java is used today: for server-side development, Android apps, and much more. Kotlin
+          .info-box
+            a(href="https://www.coursera.org/learn/kotlin-for-java-developers" alt="Coursera" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+        .box(data-aos="flip-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/k.png" alt="ahmed mohamady")
+          .content-box
+            h3 ahmed mohamady
+            p Today we are talking together about an important topic for everyone who works in the field of programming and how a programmer can estimate himself in order to ask for the salary he deserves from the employer in order to learn all this and more. Just watch the episode to the end and be with us.
+          .info-box
+            a(href="https://www.youtube.com/c/ahmedmohamady/playlists" alt="ahmed mohamady" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+        .box(data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/l.jpg" alt="TheNewBaghdad")
+          .content-box
+            h3 TheNewBaghdad
+            p An educational channel specialized in teaching everything related to the world of technology, including programming languages and information security, free of charge and of high quality One-page applications from scratch and you can get a free certified certificate upon completion of learning, get it now
+          .info-box
+            a(href="https://www.youtube.com/c/hussienahmmed/playlists" alt="TheNewBaghdad" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+    .haram
+    include layout/footer
+    script(src="./layout/js/global.min.js")

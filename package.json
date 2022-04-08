@@ -1,0 +1,55 @@
+{
+  "name": "gulpv4-boilerplate",
+  "version": "0.1.0",
+  "description": "A boilerplate for frontend projects powered by Gulp v4",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development gulp develop",
+    "prod": "cross-env NODE_ENV=production gulp prod",
+    "build": "gulp build"
+  },
+  "keywords": [],
+  "author": "algorithm",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.21",
+    "static-server": "^2.2.1",
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "browser-sync": "^2.26.7",
+    "cross-env": "^7.0.0",
+    "del": "^5.1.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-inject": "^5.0.5",
+    "gulp-livereload": "^4.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^5.1.0",
+    "gulplog": "^1.0.0",
+    "node-notifier": "^6.0.0",
+    "node-sass": "^4.14.1",
+    "vinyl-ftp": "^0.6.1",
+    "ws": "3.3.2"
+  },
+  "browserslist": [
+    "last 2 version"
+  ]
+}

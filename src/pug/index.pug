@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/meta
+    title Homepage
+    include includes/styles
+
+    // inject:css
+    // endinject
+  body
+    button.sTop: i.fa-solid.fa-chevron-up
+    // Start Settings Box
+    - var active = " active"
+    .settings-box
+      .toggle-settings
+        i.fa.fa-gear
+      .settings-container
+        .option-box
+          h4 Colors
+          ul.colors-list
+            - var colors = ["#FF9800", "#E91E63", "#009688", "#03A9F4", "#4CAF50", "#f6e58d"]
+            each color, index in colors
+              if index == 0
+                li(data-color=color class="active")
+              else
+                li(data-color=color)
+        .option-box
+          h4 Random Backgrounds
+          .random-backgrounds
+            span(class="yes active" data-background="yes") Yes
+            span(class="no" data-background="no") No
+        .option-box
+          h4 Show Bullets
+          .bullets-option
+            span(class="yes active" data-display="show") Yes
+            span(class="no" data-display="hide") No 
+        button(class="reset-options") Reset Options
+    // End Settings Box
+    // Start Nav Bullets
+    - var bullets = [".home", ".work-steps", ".services", ".information", ".contact", ".footer"]
+    - var bText = ["Home", "Work Steps", "Services", "Information" , "Contact Us", "Footer"]
+    .nav-bullets
+      each bullet, index in bullets
+        case index
+          when 0
+            div(class="bullet active" data-section=bullets[index])
+              .tooltip= bText[index]
+          default
+            div(class="bullet" data-section=bullets[index])
+              .tooltip= bText[index]
+    // End Nav Bullets
+    //- include layout/global
+    // Start Header Area
+    .header-area
+      .menu
+        .mega-menu
+          .image
+            img(src="images/megamenu.png" alt="")
+          ul.links-courses
+            - var namesCourses = ["Web Design", "Cyber Security", "Data Analysis", "Mobile Developement", "UI / UX Design", "Desktop Application"]
+            - var classesCourses = ["web-design.html", "cyber-security.html", "data-analysis.html", "mobile-developement.html", "ui-ux-design.html", "desktop-application.html"]
+            - var icons = ["fa-solid fa-bezier-curve", "fa-solid fa-shield", "fa-solid fa-chart-line", "fa-solid fa-code", "fa-solid fa-pen-ruler", "fa-solid fa-desktop"]
+            //-xzx
+            each names, index in classesCourses
+              if index < 3
+                li 
+                  i(class=icons[index])
+                  a(href=names)= namesCourses[index]
+          ul.links-courses
+            each names, index in classesCourses
+              if index >= 3
+                li 
+                  i(class=icons[index])
+                  a(href=names)= namesCourses[index]
+      img(src="images/logo.png" alt="logo" class="logo-img")
+      .logo-text: a(href="https://taha-abdelmonim.github.io/Courses/") Courses
+      .links-container
+        ul.links
+          each bullet, index in bullets
+            if index == 0
+              li: a(class=bullets[index].slice(1) + active href="#"  data-section=bullets[index])= bText[index]
+            else
+              li: a(href="#"  data-section=bullets[index])= bText[index]
+      .toggle-class-open-menu 
+        a(href="#") Courses
+        i.fa-solid.fa-circle-chevron-up
+        //- i.fa-solid.fa-circle-chevron-down
+
+
+      .mode: i(class="fas fa-sun")
+      .toggle-menu
+        i.fa-regular.fa-bars.fa-fw
+    // End Header Area
+    // Start Landing Page
+    .landing-page
+      .overlay
+      .container
+        .introduction-text
+          .introduction-text
+            h1(data-aos="fade-left"  data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") We Are 
+              |
+              span(data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") Creative Courses 
+              . 
+                Agency
+            p(data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+    // End Landing Page
+    // Start Work Steps
+    .work-steps
+      h2.main-title(data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") Work Steps
+      .container
+        img(src="images/work-steps.png" alt="" class="image" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+        .info
+          .box(data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            img(src="images/work-steps-1.png" alt="")
+            .text
+              h3 Architecture
+              p Architecture  practice, which began in the prehistoric era, has been used as a way of expressing culture for civilizations
+          .box(data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            img(src="images/work-steps-2.png" alt="")
+            .text
+              h3 Business Analysis
+              p Business analysis is a professional discipline[1] of identifying business needs and determining solutions to business problems
+          .box(data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            img(src="images/work-steps-3.png" alt="")
+            .text
+              h3 Developement
+              p he act of developing or disclosing that which is unknown; a gradual unfolding process by which anything is developed, as a plan 
+    // End Work Steps
+    // Start Services
+    .services#services
+      h2.main-title(data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") Services
+      .container
+        .box(data-aos="fade-up-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          i.fas.fa-user-shield.fa-4x
+          h3 Security
+          .info
+            a(href="#") Details
+        .box(data-aos="fade-up-left" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          i.fas.fa-tools.fa-4x
+          h3 Fixing Issues
+          .info
+            a(href="#") Details
+        .box(data-aos="fade-down-right" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          i.fas.fa-map-marked-alt.fa-4x
+          h3 Location
+          .info
+            a(href="#") Details
+        .box(data-aos="fade-down-left" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          i.fas.fa-laptop-code.fa-4x
+          h3 Coding
+          .info
+            a(href="#") Details
+        .box(data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          i.fas.fa-palette.fa-4x
+          h3 Security
+          .info
+            a(href="#") Design
+        .box(data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          i.fas.fa-bullhorn.fa-4x
+          h3 Marketing
+          .info
+            a(href="#") Details
+    // End Services
+    // Start Information
+    .information
+      .container
+        .main-title(data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") Information
+        ul.classic-list.info-list(data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          each bullet, index in bullets
+            case index
+              when 0: - break
+              when 1: li(class="selected"  data-class="shuffle-"+bullets[index].slice(1))= bText[index]
+              when 5: break
+              default: li(data-class="shuffle-"+bullets[index].slice(1))= bText[index]
+        .info-content(data-aos="zoom-in-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          each bullet, index in bullets
+            case index
+              when 0: - break
+              when 1: div(class="shuffle-"+bullets[index].slice(1)) 
+                h3= bText[index]
+                img(src="./images/work-steps4.jpg" class="col-6")
+                p.col-5 As an organisation, we position people at the heart of everything we do and firmly believe that those who face the biggest barriers deserve the most help to build a brighter future. As a charity with over 20 years’ experience, we are committed to driving positive change within the communities we serve through the delivery of employment support services.These facts alone could be costing your business millions of dollars in workers’ compensation claims. This is where WorkSTEPS testing can help. WorkSTEPS is a legally compliant
+              when 2: div(class="shuffle-"+bullets[index].slice(1)) 
+                h3= bText[index]
+                img(src="./images/services.jpg" class="col-6")
+                p.col-5 A service is an "(intangible) act or use for which a consumer, firm, or government is willing to pay."[1] Examples include work done by barbers, doctors, lawyers, mechanics, banks, insurance companies, and so on. Public services are those that society (nation state, fiscal union or region) as a whole pays for. Using resources, skill, ingenuity, and experience, service providers benefit service consumers. Service is intangible in nature. Services may be defined as acts or performances whereby the service provider provides value
+              when 3: div(class="shuffle-"+bullets[index].slice(1)) 
+                h3= bText[index]
+                img(src="./images/information.jpg" class="col-6")
+                p.col-5 Information is processed, organized and structured data. It provides context for data and enables decision making process. For example, a single customer’s sale at a restaurant is data – this becomes information when the business is able to identify the most popular or least popular dish More technically, information can be thought of as the resolution of uncertainty that manifests itself as patterns;[2] it answers the question of "What an entity is" and thus defines both its essence and the nature of its characteristics concept
+              when 4: div(class="shuffle-"+bullets[index].slice(1)) 
+                h3= bText[index]
+                img(src="./images/timeline.png" class="col-6")
+                p.col-5 Timelines can use any suitable scale representing time, suiting the subject and data; many use a linear scale, in which a unit of distance is equal to a set amount of time. This timescale is dependent on the events in the timeline. A timeline of evolution can be over millions of years, whereas a timeline for the day of the September 11 attacks can take place over minutes, and that of an explosion over milliseconds.[2] While many timelines use a linear timescale—especially where very large or small timespans are relevant scale time
+              default: div(class="shuffle-"+bullets[index].slice(1))= bText[index]
+    // End Information
+    // Start Contact Us
+    .contact
+      h3(data-aos="zoom-in-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") Contact Us
+      .container
+        i.fa.fa-headphones.fa-5x(data-aos="zoom-in-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+        h4(data-aos="zoom-in-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") Tell Us What You Fell
+        p(data-aos="zoom-in-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") Feel Free To Contact Us Anytime
+        form(data-aos="fade-left" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") 
+          .input.col-6(data-aos="fade-right" data-aos-delay="600" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            input(type="text" placeholder="Uesrname")
+            input(type="email" placeholder="Email")
+            input(type="password" placeholder="Password")
+          .submit.col-6(data-aos="fade-left" data-aos-delay="600" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            textarea(placeholder="Your Message")
+          button(type="button" data-aos="fade-up" data-aos-delay="600" data-aos-offset="-400" data-aos-anchor-placement="center-center" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") Contact Us
+    // End Contact Us
+    // Start Section Our Clients
+    .our-clients
+      .container
+        ul
+          li.col-2(data-aos="flip-up" data-aos-delay="3000" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            img(src="images/bbc.png" alt="BBC")
+          li.col-2(data-aos="flip-down" data-aos-delay="2500" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            img(src="images/cnn.png" alt="CNN")
+          li.col-2(data-aos="flip-up" data-aos-delay="1800" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            img(src="images/forbes.png" alt="Forbes")
+          li.col-2(data-aos="flip-down" data-aos-delay="1200" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            img(src="images/wired.png" alt="Wired")
+          li.col-2(data-aos="flip-up" data-aos-delay="500" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            img(src="images/wsj.png" alt="WSJ")
+          li.col-2(data-aos="flip-down" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+            img(src="images/techradar.png" alt="Tech Radar")
+    // End Section Our Clients
+
+    include layout/footer
+    // inject:js
+    // endinject

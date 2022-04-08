@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/meta
+    title Data Analysis
+    include includes/styles
+
+    // inject:css
+    // endinject
+  body
+    include layout/global
+    .articles#articles
+      h2.main-title(data-aos="flip-up" data-aos-duration="1000" data-aos-easing="linear" data-aos-once="false") Data Analysis From
+      .container
+        .box(data-aos="fade-up" data-aos-delay="500" data-aos-duration="3000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/g.png" alt="Udacity")
+          .content-box
+            h3 Udacity
+            p Become a Data Analyst Use Python, SQL, and statistics to uncover insights, communicate critical findings, and create data-driven solutionsAdvance your programming skills and refine your ability to work with messy, complex datasets. You’ll learn to manipulate and prepare data for analysis, and create visualizations for data
+          .info-box
+            a(href="https://www.udacity.com/course/data-analyst-nanodegree--nd002" alt="Udacity" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+        .box(data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic" data-aos-once="false")
+          img(src="./images/h.jpg" alt="Hussam Hourani")
+          .content-box
+            h3 Hussam Hourani
+            p Perform simple data analysis with clever data visualization. Explore statistical distributions, box plots and scatter plots, or dive deeper with decision trees, hierarchical clustering, heatmaps, MDS and linear projections. Even your multidimensional data can become sensible in 2D, especially with clever attribute ranking and selections.
+          .info-box
+            a(href="https://www.youtube.com/channel/UCb2aFMZk4tlxotB14sNBQXA/playlists" alt="Hussam Hourani" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+        .box(data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" data-aos-easing="linear" data-aos-once="false")
+          img(src="./images/i.png" alt="Mustafa Othman")
+          .content-box
+            h3 Mustafa Othman
+            p The Diploma in Data Science and Analysis using Python is the first step in our journey in the field of data science and artificial intelligence, and it is an initiative through which we seek to enrich Arabic content in this field by preparing a comprehensive training course in an interactive and practical anyone who wants to start working as a data analyst
+          .info-box
+            a(href="https://www.youtube.com/c/MustafaOthman/playlists" alt="Mustafa Othman" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+    .haram
+    include layout/footer
+    script(src="./layout/js/global.min.js")

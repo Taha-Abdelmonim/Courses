@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/meta
+    title Desktop Application
+    include includes/styles
+
+    // inject:css
+    // endinject
+  body
+    include layout/global
+    .articles#articles
+      h2.main-title(data-aos="flip-up" data-aos-duration="1000" data-aos-easing="linear" data-aos-once="false") Desktop Application From
+      .container
+        .box(data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/p.jpg" alt="Khalid ESSAADANI")
+          .content-box
+            h3 Khalid ESSAADANI
+            p In the software design dictionary, you will find several widely spread terms, such as the term Coupling, the term Responsibility, the term Abstraction and others. These terms play an essential role in understanding design mechanisms, as we will find them included in the definitions of some principles and models
+          .info-box
+            a(href="https://www.youtube.com/c/EssaadaniTV/playlists" alt="Khalid ESSAADANI" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+        .box(data-aos="flip-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/q.jpg" alt="Udemy")
+          .content-box
+            h3 Udemy
+            p This course is intended for students who are passionate in doing programming and curious for developing their own product and contribute in the software industry. This course help you to build cutting edge knowledge of how traditional software works and what is the science behind it After completing
+          .info-box
+            a(href="https://www.udemy.com/course/desktop-application-development-windows-forms-c/" alt="Udemy" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+        .box(data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/k.png" alt="ahmed mohamady")
+          .content-box
+            h3 ahmed mohamady
+            p Today we are talking together about an important topic for everyone who works in the field of programming and how a programmer can estimate himself in order to ask for the salary he deserves from the employer in order to learn all this and more. Just watch the episode to the end and be with us.
+          .info-box
+            a(href="https://www.youtube.com/watch?v=SpL_EtF8iSk&list=PLqPejUavRNTVu6AWaG8HREYJDw6cL1oZA" alt="ahmed mohamady" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+    .haram
+    include layout/footer
+    script(src="./layout/js/global.min.js")

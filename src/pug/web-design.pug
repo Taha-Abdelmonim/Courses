@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/meta
+    title Web Design
+    include includes/styles
+
+    // inject:css
+    // endinject
+  body
+    include layout/global
+    .articles#articles
+      h2.main-title(data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false") Web Design From
+      .container
+        .box(data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/a.jpg" alt="Osama Elzero")
+          .content-box
+            h3 Osama Elzero
+            p Zero Academy is an educational platform that provides many web development paths with an interactive detailed explanation in Arabic, study plans with tests to ensure understanding and application of the code.
+          .info-box
+            a(href="https://elzero.org/" alt="Elzero" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+        .box(data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/b.jpg" alt="Yaakov Chaikin")
+          .content-box
+            h3 Yaakov Chaikin <br/> HTML, CSS, and Javascript for Web Developers
+            p Do you realize that the only functionality of a web application that the user directly interacts with is through the web page? Implement it poorly and, to the user
+          .info-box
+            a(href="https://www.coursera.org/learn/html-css-javascript-for-web-developers" alt="Yaakov" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+        .box(data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false")
+          img(src="./images/c.jpg" alt="Laurence Svekis")
+          .content-box
+            h3 Laurence Svekis <br/> Front-end Web developer MasterClass HTML CSS JavaScript
+            p Learn HTML CSS and JavaScript all in one course.  This is the complete front end web developer starting course. Whether you are looking to refresh your skills 
+          .info-box
+            a(href="https://www.udemy.com/course/learn-html-css-javascript/" alt="Elzero" target="_blank") Read More
+            i.fas.fa-long-arrow-alt-right
+    .haram
+    include layout/footer
+    script(src="./layout/js/global.min.js")

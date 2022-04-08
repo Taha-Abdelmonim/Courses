@@ -1,0 +1,52 @@
+button.sTop: i.fa-solid.fa-chevron-up
+// Start Settings Box
+- var active = " active"
+.settings-box
+  .toggle-settings
+    i.fa.fa-gear
+  .settings-container
+    .option-box
+      h4 Colors
+      ul.colors-list
+        - var colors = ["#FF9800", "#E91E63", "#009688", "#03A9F4", "#4CAF50", "#f6e58d"]
+        each color, index in colors
+          if index == 0
+            li(data-color=color class="active")
+          else
+            li(data-color=color)
+    button(class="reset-options") Reset Options
+// End Settings Box
+- var bullets = [".home", ".work-steps", ".services", ".information", ".contact", ".footer"]
+- var bText = ["Home", "Work Steps", "Services", "Information" , "Contact Us", "Footer"]
+// Start Header Area
+.header-area
+  .menu
+    .mega-menu
+      .image
+        img(src="images/megamenu.png" alt="")
+      ul.links-courses
+        - var namesCourses = ["Web Design", "Cyber Security", "Data Analysis", "Mobile Developement", "UI / UX Design", "Desktop Application"]
+        - var classesCourses = ["web-design.html", "cyber-security.html", "data-analysis.html", "mobile-developement.html", "ui-ux-design.html", "desktop-application.html"]
+        - var icons = ["fa-solid fa-bezier-curve", "fa-solid fa-shield", "fa-solid fa-chart-line", "fa-solid fa-code", "fa-solid fa-pen-ruler", "fa-solid fa-desktop"]
+        //-xzx
+        each names, index in classesCourses
+          if index < 3
+            li 
+              i(class=icons[index])
+              a(href=names)= namesCourses[index]
+      ul.links-courses
+        each names, index in classesCourses
+          if index >= 3
+            li 
+              i(class=icons[index])
+              a(href=names)= namesCourses[index]
+  img(src="images/logo.png" alt="logo" class="logo-img")
+  .logo-txt: a(href="https://taha-abdelmonim.github.io/Courses/") Courses 
+  .toggle-class-open-menu 
+    a(href="#") Courses
+    i.fa-solid.fa-circle-chevron-up
+    //- i.fa-solid.fa-circle-chevron-down
+
+
+  .mod: span(class="fas fa-sun")
+// End Header Area
