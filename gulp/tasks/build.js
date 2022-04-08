@@ -8,8 +8,8 @@ const { parallel, series, task } = require("gulp"),
   { cleanup } = require("./cleanup"),
   browserSync = require("browser-sync").create();
 
-// task("serving", parallel(watcher, server));
-const build = series(cleanup, parallel(css, js, jsGlobal, webFonts, staticFiles), html);
+task("serving", parallel(watcher, server));
+const build = series(cleanup, parallel(css, js, jsGlobal, webFonts, staticFiles), html, "serving");
 
 module.exports = {
   build,

@@ -1,5 +1,5 @@
 const { dest, src } = require("gulp"),
-  sass = require("gulp-sass"),
+  sass = require("gulp-sass")(require("sass")),
   plumber = require("gulp-plumber"),
   { styles } = require("../config/paths"),
   { plumberConfig } = require("../config/pluginsConfig"),
@@ -14,7 +14,6 @@ const { dest, src } = require("gulp"),
   sourcemaps = require("gulp-sourcemaps"),
   newer = require("gulp-newer"),
   autoprefixer = require("gulp-autoprefixer");
-sass.compiler = require("node-sass");
 
 const css = async (done) => {
   await new Promise((res, rej) => {
