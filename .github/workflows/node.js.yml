@@ -26,6 +26,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: yarn install
-        working-directory: client
+        # working-directory: client
       - run: yarn build
-        working-directory: client
+        # working-directory: client
