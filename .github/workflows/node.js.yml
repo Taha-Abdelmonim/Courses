@@ -28,4 +28,4 @@ jobs:
       - run: yarn install
         # working-directory: client
       - run: yarn build
-        # working-directory: client
+        # working-directory: client 
